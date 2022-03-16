@@ -30,3 +30,9 @@ npm link ../typescript-package-example
 
 Now, in the consumer folder: import { CalculatorService } from "my-first-library";
 Invoke the add function and test it with: npm start
+
+# angular libraries
+
+Install ng-packagr globally: npm i ng-packagr -g
+
+NOTE: If you import something from a lib via ES6 import statement, it has to be part of the entry file!
