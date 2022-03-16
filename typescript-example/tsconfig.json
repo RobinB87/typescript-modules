@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "module": "commonjs",
+    // can use both es5 and 6?
+    "target": "es6"
+  },
+  // include all files in root folder:
+  "include": ["./"]
+}
