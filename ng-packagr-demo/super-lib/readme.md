@@ -15,3 +15,6 @@ npm i ng-packagr tsickle --save-dev
 
 In package.json add script:
 "build-lib": "ng-packagr -p super-lib/package.json"
+
+Then in the libs package.json:
+"ngPackage": { "lib": { "entryFile": "public_api.ts" } }
