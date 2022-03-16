@@ -1,4 +1,4 @@
-# Info
+# info
 
 This is my first library with ng-packagr
 
@@ -20,3 +20,12 @@ Then in the libs package.json:
 "ngPackage": { "lib": { "entryFile": "public_api.ts" } }
 
 Then create the package with: npm run build-lib
+
+# install in root project (ng-packagr-demo)
+
+npm i ./super-lib/dist
+
+# import
+
+import { SuperLibModule } from 'super-lib';
+This is the name of the library, not the folder that it lives in!
