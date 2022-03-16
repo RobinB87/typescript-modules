@@ -25,6 +25,8 @@ Typing files are created with types, which provides the types to the consumer.
 Add main.ts and tsconfig, but now add all files instead of src/.
 Create package.json again, now by: npm init. Manually add start script.
 
-You can link the package locally by:
+You can link the package locally by (this creates a node_modules folder):
 npm link ../typescript-package-example
-This creates a node_modules folder
+
+Now, in the consumer folder: import { CalculatorService } from "my-first-library";
+Invoke the add function and test it with: npm start
