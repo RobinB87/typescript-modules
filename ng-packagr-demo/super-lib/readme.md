@@ -18,3 +18,5 @@ In package.json add script:
 
 Then in the libs package.json:
 "ngPackage": { "lib": { "entryFile": "public_api.ts" } }
+
+Then create the package with: npm run build-lib
