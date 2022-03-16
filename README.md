@@ -27,3 +27,4 @@ Create package.json again, now by: npm init. Manually add start script.
 
 You can link the package locally by:
 npm link ../typescript-package-example
+This creates a node_modules folder
