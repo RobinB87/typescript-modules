@@ -4,7 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyLoginModule } from 'my-login';
-import { MyConsoleLoggerModule } from 'my-console-logger';
+import {
+  MyConsoleLoggerModule,
+  MyConsoleLoggerService,
+} from 'my-console-logger';
+import { CustomLoggerService } from './services/custom-logger-service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +21,9 @@ import { MyConsoleLoggerModule } from 'my-console-logger';
       appPrefix: 'ROBINB87',
     }),
   ],
-  providers: [],
+  providers: [
+    { provide: MyConsoleLoggerService, useClass: CustomLoggerService },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

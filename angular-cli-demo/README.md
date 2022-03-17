@@ -21,3 +21,12 @@ A service library is provided in root and is exported over the public api (publi
 
 To add config, also update the module with forRoot. At the providers ensure to add a class, not an interface?
 Importing a service module is not required, but to use the config, import the module with .forRoot{});
+
+# using an interface
+
+To be able to switch the service, for example for testing purposes, you can use an abstract base class. It acts more or less like an interface, but an interface can not be used in Angular with Dependency Injection, as in typescript interfaces are thrown out when transpiling to javascript.
+
+As you need this abstract class to be available from the outside, it needs to be exported by the public_api.ts file. Which occurs in this case, as the abstract class is created in the logger.service.ts.
+
+It needs to be provided in a Module with for example some overriding service:
+providers: [ { provide: MyConsoleLoggerService, useClass: CustomLoggerService } ],

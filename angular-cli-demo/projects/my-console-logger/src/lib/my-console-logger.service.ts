@@ -1,10 +1,16 @@
 import { Injectable } from '@angular/core';
 import { LoggerConfig } from './logger.config';
 
+export abstract class AbstractLoggerService {
+  abstract warn(message: string): void;
+  abstract error(message: string): void;
+  abstract info(message: string): void;
+}
+
 @Injectable({
   providedIn: 'root',
 })
-export class MyConsoleLoggerService {
+export class MyConsoleLoggerService implements AbstractLoggerService {
   constructor(private loggerConfig: LoggerConfig) {}
 
   warn(message: string) {
