@@ -12,6 +12,10 @@ api/wwwroot
 *.user
 *.userosscache
 *.sln.docstates
+*.dgspec.json
+*.nuget.cache
+*.assets.cache
+*.editorconfig
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -35,6 +39,7 @@ bld/
 [Ll]ogs/
 /obj
 */obj
+obj/debug/netcoreapp2.1
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
