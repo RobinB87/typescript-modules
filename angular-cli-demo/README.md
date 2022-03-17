@@ -30,3 +30,22 @@ As you need this abstract class to be available from the outside, it needs to be
 
 It needs to be provided in a Module with for example some overriding service:
 providers: [ { provide: MyConsoleLoggerService, useClass: CustomLoggerService } ],
+
+# linting
+
+Can use some scripts for linting:
+"lint-my-login": "ng lint my-login",
+"lint-my-console-logger": "ng lint my-console-logger",
+"lint-all-libs": "npm run lint-my-login && npm run lint-my-console-logger",
+
+# testing a library
+
+ng test library-name
+
+in CI/CD to ensure test does not run endlessly, but only once:
+ng test library-name --watch=false
+
+# only test in console, not spawning browser:
+
+"test-my-login-watch": "ng test my-login --browsers=ChromeHeadless"
+test by running this command
