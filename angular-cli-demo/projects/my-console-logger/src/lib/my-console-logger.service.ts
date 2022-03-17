@@ -1,18 +1,23 @@
 import { Injectable } from '@angular/core';
+import { LoggerConfig } from './logger.config';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MyConsoleLoggerService {
+  constructor(private loggerConfig: LoggerConfig) {}
+
   warn(message: string) {
-    console.warn('custom warn: ' + message);
+    if (this.loggerConfig.isProduction) return;
+
+    console.warn(`${this.loggerConfig.appPrefix}${message}`);
   }
   error(message: string) {
-    console.error('custom error: ' + message);
+    console.error(`${this.loggerConfig.appPrefix}${message}`);
   }
   info(message: string) {
-    console.info('custom info: ' + message);
-  }
+    if (this.loggerConfig.isProduction) return;
 
-  constructor() {}
+    console.info(`${this.loggerConfig.appPrefix}${message}`);
+  }
 }
