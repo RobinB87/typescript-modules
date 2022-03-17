@@ -8,10 +8,10 @@ export class MyConsoleLoggerService {
     console.warn('custom warn: ' + message);
   }
   error(message: string) {
-    console.warn('custom error: ' + message);
+    console.error('custom error: ' + message);
   }
   info(message: string) {
-    console.warn('custom info: ' + message);
+    console.info('custom info: ' + message);
   }
 
   constructor() {}

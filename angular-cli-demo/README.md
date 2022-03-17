@@ -12,3 +12,7 @@ Add build script in package.json
 "build-my-login": "ng build my-login",
 
 Can also add a watch with --watch, so you do not have to build in the appliction as well, all the time. Visible output: Compilation complete. Watching for file changes...
+
+# angular service library
+
+A service library is provided in root and is exported over the public api (public_api.ts). It can be easily imported without importing the library module in your application, as the service provides itself to the root injector when it is imported via the ES6 import statement.
