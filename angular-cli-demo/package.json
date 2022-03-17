@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build-my-login": "ng build my-login"
+    "build-my-login": "ng build my-login",
+    "watch-my-login": "ng build my-login --watch"
   },
   "private": true,
   "dependencies": {

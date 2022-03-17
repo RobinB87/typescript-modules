@@ -5,3 +5,10 @@ A projects folder will be created automatically with the library
 
 The cli will also add our library to the paths array of the main tsconfig.json (from the app itself), where the typescript compiler gets configured.
 So everytime we import something by the ES6 import statement, the typescript compiler will first search in this array. If it does not find it, it will look in the node_modules folder.
+
+# build
+
+Add build script in package.json
+"build-my-login": "ng build my-login",
+
+Can also add a watch with --watch, so you do not have to build in the appliction as well, all the time. Visible output: Compilation complete. Watching for file changes...
