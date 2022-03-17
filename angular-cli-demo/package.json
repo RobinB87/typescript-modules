@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build-my-login": "ng build my-login",
-    "watch-my-login": "ng build my-login --watch"
+    "watch-my-login": "ng build my-login --watch",
+    "build-my-console-logger": "ng build my-console-logger",
+    "watch-my-console-logger": "ng build my-console-logger --watch"
   },
   "private": true,
   "dependencies": {

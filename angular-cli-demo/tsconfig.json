@@ -12,6 +12,10 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
+      "my-console-logger": [
+        "dist/my-console-logger/my-console-logger",
+        "dist/my-console-logger"
+      ],
       "my-login": [
         "dist/my-login/my-login",
         "dist/my-login"
