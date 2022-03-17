@@ -11,7 +11,8 @@
     "watch-my-login": "ng build my-login --watch",
     "build-my-console-logger": "ng build my-console-logger",
     "watch-my-console-logger": "ng build my-console-log --watch",
-    "test-my-login-watch": "ng test my-login --browsers=ChromeHeadless"
+    "test-my-login-watch": "ng test my-login --browsers=ChromeHeadless",
+    "test-my-console-logger-watch": "ng test my-console-logger --browsers=ChromeHeadless"
   },
   "private": true,
   "dependencies": {
