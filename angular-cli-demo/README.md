@@ -49,3 +49,10 @@ ng test library-name --watch=false
 
 "test-my-login-watch": "ng test my-login --browsers=ChromeHeadless"
 test by running this command
+
+# watch all tests for all libraries
+
+You can run various tests in parallel with npm-run-all:
+npm i npm-run-all --save-dev
+
+Create script for it with run-p. Can also create ci tests with watch=false which execute once and then quit.

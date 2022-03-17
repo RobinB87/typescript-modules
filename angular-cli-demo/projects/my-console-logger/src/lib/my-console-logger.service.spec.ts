@@ -27,4 +27,40 @@ describe('MyConsoleLoggerService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should call warn when production is false', () => {
+    const myService = new MyConsoleLoggerService({
+      appPrefix: 'anything',
+      isProduction: false,
+    });
+
+    const spy = spyOn(console, 'warn');
+    myService.warn('this is a test');
+
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should NOT call warn when production is true', () => {
+    const myService = new MyConsoleLoggerService({
+      appPrefix: 'anything',
+      isProduction: true,
+    });
+
+    const spy = spyOn(console, 'warn');
+    myService.warn('this is a test');
+
+    expect(spy).not.toHaveBeenCalled();
+  });
+
+  it('logged message should have defined prefix', () => {
+    const myService = new MyConsoleLoggerService({
+      appPrefix: 'anything',
+      isProduction: false,
+    });
+
+    const spy = spyOn(console, 'info');
+    myService.info('this is a test');
+
+    expect(spy).toHaveBeenCalledWith('anything: this is a test');
+  });
 });
