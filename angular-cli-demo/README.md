@@ -16,3 +16,7 @@ Can also add a watch with --watch, so you do not have to build in the appliction
 # angular service library
 
 A service library is provided in root and is exported over the public api (public_api.ts). It can be easily imported without importing the library module in your application, as the service provides itself to the root injector when it is imported via the ES6 import statement.
+
+# add configuration in library
+
+To add config, also update the module with forRoot. At the providers ensure to add a class, not an interface?
