@@ -20,3 +20,4 @@ A service library is provided in root and is exported over the public api (publi
 # add configuration in library
 
 To add config, also update the module with forRoot. At the providers ensure to add a class, not an interface?
+Importing a service module is not required, but to use the config, import the module with .forRoot{});
