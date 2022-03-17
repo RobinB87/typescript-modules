@@ -1,27 +1,29 @@
-# NgPackagrDemo
+# create a package with ng-packagr
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+public_api.ts is required. It represents the interface to this library.
+Everything exported here can be used externally.
 
-## Development server
+Also add a package.json:
+Peer dependencies are not real dependencies for the library, but they tell the consumer that are package needs specific dependencies to run as expected.
+Eg: please have Angular Core 7 or greater:
+"@angular/core": ">=7.0.0"
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Then in root of the application:
+npm i ng-packagr tsickle --save-dev
 
-## Code scaffolding
+In package.json add script:
+"build-lib": "ng-packagr -p super-lib/package.json"
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Then in the libs package.json:
+"ngPackage": { "lib": { "entryFile": "public_api.ts" } }
 
-## Build
+Then create the package with: npm run build-lib
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# install in root project (ng-packagr-demo)
 
-## Running unit tests
+npm i ./super-lib/dist
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# import
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+import { SuperLibModule } from 'super-lib';
+This is the name of the library, not the folder that it lives in!
