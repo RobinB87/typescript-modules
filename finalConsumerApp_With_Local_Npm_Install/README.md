@@ -1,6 +1,7 @@
 # FinalConsumerAppWithLocalNpmInstall
 
 On of the final consumer apps where an example is provided with a LOCAL npm install of the previously created libraries.
+This is a nice way to test libraries before publishing.
 
 npm i, one folder back and then the application, dist folder and library:
 npm i ..\angular-cli-demo\dist\my-console-logger\
