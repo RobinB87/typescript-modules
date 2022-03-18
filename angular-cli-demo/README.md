@@ -77,3 +77,7 @@ Once the library is deployed, you can only redeploy when the version is updated.
 # consume
 
 Install with npm i @robinb87/my-console-logger
+
+# scope
+
+using a scope (@robinb87) also ensures you have only one folder in the the consuming app's node_modules, with the packages in it.
