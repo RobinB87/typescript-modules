@@ -73,3 +73,7 @@ Once the library is deployed, you can only redeploy when the version is updated.
 3. If not logged in with npm: npm login
 4. In the created dist folder go to the library
 5. invoke: npm publish --access public
+
+# consume
+
+Install with npm i @robinb87/my-console-logger
