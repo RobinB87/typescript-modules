@@ -16,7 +16,9 @@
     "test-all-libs-watch": "run-p test-my-login-watch test-my-console-logger-watch",
     "test-my-login-ci": "ng test my-login --watch=false --browsers=ChromeHeadless",
     "test-my-console-logger-ci": "ng test my-console-logger --watch=false --browsers=ChromeHeadless",
-    "test-all-libs-ci": "run-p test-my-login-ci test-my-console-logger-ci"
+    "test-all-libs-ci": "run-p test-my-login-ci test-my-console-logger-ci",
+    "pack-my-login": "cd dist/my-login && npm pack",
+    "pack-my-logger": "cd dist/my-console-logger && npm pack"
   },
   "private": true,
   "dependencies": {
