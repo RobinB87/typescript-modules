@@ -56,3 +56,20 @@ You can run various tests in parallel with npm-run-all:
 npm i npm-run-all --save-dev
 
 Create script for it with run-p. Can also create ci tests with watch=false which execute once and then quit.
+
+# packing
+
+See the three final consumer projects for packing options.
+
+# publishing
+
+Once the library is deployed, you can only redeploy when the version is updated.
+
+1. Update version if new build
+2. build library
+   ng build my-login
+   or with the self created script: npm run build-my-console-logger
+
+3. If not logged in with npm: npm login
+4. In the created dist folder go to the library
+5. invoke: npm publish --access public
