@@ -18,6 +18,8 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "my-console-logger": "file:../angular-cli-demo/dist/my-console-logger/my-console-logger-0.0.0-watch+1647524218756.tgz",
+    "my-login": "file:../angular-cli-demo/dist/my-login/my-login-0.0.0-watch+1647511438128.tgz",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
